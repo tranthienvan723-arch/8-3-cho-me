@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chúc mừng mẹ 8/3</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    background:linear-gradient(135deg,#ffc0cb,#ff9ecf);
+    font-family: "Segoe UI", cursive;
+    text-align:center;
+    overflow:hidden;
+}
+
+.container{
+    position:relative;
+    top:20%;
+    color:white;
+}
+
+h1{
+    font-size:40px;
+    text-shadow:2px 2px 5px rgba(0,0,0,0.3);
+}
+
+p{
+    font-size:20px;
+    width:70%;
+    margin:auto;
+}
+
+.heart{
+    position:absolute;
+    color:red;
+    font-size:24px;
+    animation:bay 6s linear infinite;
+}
+
+@keyframes bay{
+    0%{
+        transform:translateY(100vh) scale(1);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-10vh) scale(1.5);
+        opacity:0;
+    }
+}
+
+.flower{
+    position:absolute;
+    font-size:28px;
+    animation:roi 8s linear infinite;
+}
+
+@keyframes roi{
+    0%{
+        transform:translateY(-10vh) rotate(0deg);
+    }
+    100%{
+        transform:translateY(110vh) rotate(360deg);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>💐 Chúc mừng mẹ ngày 8/3 💐</h1>
+
+<p>
+Chúc mẹ Ngày Quốc tế Phụ nữ 8/3 thật ấm áp và ý nghĩa.  
+Con mong mẹ mãi giữ nụ cười hiền hậu ấy.
+</p>
+
+<p>
+Cảm ơn mẹ vì những bữa cơm ngon và vòng tay ấm áp.  
+Con tự hào vì được làm con của mẹ.  
+Chúc mẹ thật nhiều hoa và thật nhiều yêu thương 💖
+</p>
+
+</div>
+
+<script>
+
+function taoTim(){
+    const tim=document.createElement("div");
+    tim.classList.add("heart");
+    tim.innerHTML="💖";
+    tim.style.left=Math.random()*100+"vw";
+    tim.style.animationDuration=(3+Math.random()*3)+"s";
+    document.body.appendChild(tim);
+
+    setTimeout(()=>{tim.remove();},6000);
+}
+
+setInterval(taoTim,500);
+
+function taoHoa(){
+    const hoa=document.createElement("div");
+    hoa.classList.add("flower");
+    hoa.innerHTML="🌸";
+    hoa.style.left=Math.random()*100+"vw";
+    hoa.style.animationDuration=(5+Math.random()*5)+"s";
+    document.body.appendChild(hoa);
+
+    setTimeout(()=>{hoa.remove();},8000);
+}
+
+setInterval(taoHoa,700);
+
+</script>
+
+</body>
+</html>
